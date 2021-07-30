@@ -4,8 +4,8 @@ from plyer.utils import platform
 from plyer import notification
 import datetime
 
-# Shows notification every 30 minutes.
-minutes = 30
+# Shows notification every hour.
+minutes = 60
 
 # Runs forever, until the computer is shut down or the program is terminated?
 while(True):
