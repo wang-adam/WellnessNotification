@@ -1,18 +1,17 @@
-import plyer
 import time
-from plyer.utils import platform
-from plyer import notification
+from notify import notification
 import datetime
 
-# Shows notification every hour.
-minutes = 60
+# Shows notification every 45 minutes.
+minutes = 45
+
+print("Wellness notification that reminds you to take a break every", minutes, "minutes")
 
 # Runs forever, until the computer is shut down or the program is terminated?
 while(True):
     time.sleep(60*minutes)
-    notification.notify(
-        title='Personal Wellness Notification',
-        message='Drink some water and take a stretch break. Let your eyes take a break from the screen. ♡',
-        timeout=10,
+    notification(
+        message='Personal Wellness Notification',
+        summary='Drink some water and take a stretch break. Let your eyes take a break from the screen. ♡'
     )
-    print("Last notified at ", datetime.datetime.now())
+    print("Last notified at", datetime.datetime.now())
